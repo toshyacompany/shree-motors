@@ -116,7 +116,8 @@ export function VehicleHighlights() {
     <section
       ref={containerRef}
       // h-[calc(highlights.length*100vh)] ensures the scroll duration matches the number of items.
-      className="relative bg-background"
+      className="relative bg-background "
+      id="highlights"
       style={{ height: `${highlights.length * 100}vh` }}
     >
       <div className="sticky top-0 h-screen flex flex-col overflow-hidden">

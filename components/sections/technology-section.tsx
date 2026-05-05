@@ -94,8 +94,35 @@ export function TechnologySection() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [textProgress, setTextProgress] = useState(0);
 
-  const descriptionText =
-    "Experience outdoor gear reimagined with cutting-edge technology. Alpine & Forest accessories combine ultra-lightweight materials, intelligent temperature control, and weather-resistant engineering to elevate every adventure. From mountain peaks to forest trails, your gear adapts to the conditions.";
+  const businessCases = [
+    {
+      title: "For Farmers",
+      description:
+        "EW1 is ideal with its 10ft cargo bed — perfect for long tools and bulk produce.",
+    },
+    {
+      title: "For Delivery Services",
+      description:
+        "EW2’s longer range (280km) supports city-to-city transport on a single charge.",
+    },
+    {
+      title: "For Shop Owners",
+      description:
+        "Both are cost-effective, but EW2 offers better value if your deliveries are frequent and range matters.",
+    },
+  ];
+
+  const technicalComparison = [
+    { label: "Price", ew1: "NPR 25.90 Lakhs", ew2: "NPR 25.70 Lakhs" },
+    { label: "Driving Range", ew1: "260 KM", ew2: "280 KM" },
+    { label: "Cargo Bed Size", ew1: "10 Feet", ew2: "8.5 Feet" },
+    { label: "Payload Capacity", ew1: "1.5 Tons", ew2: "1.5 Tons" },
+    {
+      label: "Charging Type",
+      ew1: "AC/DC Fast & Standard",
+      ew2: "AC/DC Fast & Standard",
+    },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -142,13 +169,13 @@ export function TechnologySection() {
   const imageProgress = Math.max(0, Math.min(1, (scrollProgress - 0.2) / 0.8));
 
   // Smooth interpolations
-  const centerWidth = 100 - imageProgress * 58; // 100% to 42%
+  const centerWidth = 100 - imageProgress * 0; // 100% to 42%
   const centerHeight = 100 - imageProgress * 30; // 100% to 70%
   const sideWidth = imageProgress * 22; // 0% to 22%
   const sideOpacity = imageProgress;
   const sideTranslateLeft = -100 + imageProgress * 50; // -100% to 0%
   const sideTranslateRight = 100 - imageProgress * 50; // 100% to 0%
-  const borderRadius = imageProgress * 10; // 0px to 24px
+  const borderRadius = imageProgress * 0; // 0px to 24px
   const gap = imageProgress * 16; // 0px to 16px
 
   // Calculate grayscale for text section based on textProgress
@@ -164,37 +191,6 @@ export function TechnologySection() {
             className="relative flex h-full w-full items-stretch justify-center"
             style={{ gap: `${gap}px`, padding: `${imageProgress * 16}px` }}
           >
-            {/* Left Column */}
-            <div
-              className="flex flex-col will-change-transform"
-              style={{
-                width: `${sideWidth}%`,
-                gap: `${gap}px`,
-                transform: `translateX(${sideTranslateLeft}%)`,
-                opacity: sideOpacity,
-              }}
-            >
-              {/* {sideImages
-                .filter((img) => img.position === "left")
-                .map((img, idx) => (
-                  <div
-                    key={idx}
-                    className="relative overflow-hidden will-change-transform"
-                    style={{
-                      flex: img.span,
-                      borderRadius: `${borderRadius}px`,
-                    }}
-                  >
-                    <Image
-                      src={img.src || "/placeholder.svg"}
-                      alt={img.alt}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                ))} */}
-            </div>
-
             {/* Main Center Image */}
             <div
               className="relative bg-primary rounded-3xl overflow-hidden will-change-transform"
@@ -205,21 +201,21 @@ export function TechnologySection() {
                 borderRadius: `${borderRadius}px`,
               }}
             >
-              {/* <Image
-                src="/images/meet-kama.jpeg"
-                alt="Aerial view of camping expedition in wilderness"
-                fill
-                className="object-cover"
-              /> */}
               <div className="absolute" />
 
               {/* Title Text - Fades out word by word with blur */}
               <div className="absolute inset-0 flex flex-col items-center bg-primary rounded-3xl justify-center px-6 text-center">
-                <h2 className="max-w-3xl font-medium leading-tight tracking-tight text-background md:text-5xl lg:text-7xl text-5xl">
-                  {["Technology", "Meets", "Wilderness."].map((word, index) => {
+                <h2 className="max-w-4xl font-medium leading-tight tracking-tight text-background md:text-5xl lg:text-8xl text-5xl">
+                  {[
+                    "Precision",
+                    "Engineering",
+                    "for",
+                    "Modern",
+                    "Logistics.",
+                  ].map((word, index) => {
                     // Each word fades out sequentially based on scrollProgress
-                    const wordFadeStart = index * 0.07; // Technology: 0, Meets: 0.07, Wilderness: 0.14
-                    const wordFadeEnd = wordFadeStart + 0.07;
+                    const wordFadeStart = index * 0.04;
+                    const wordFadeEnd = wordFadeStart + 0.05;
                     const wordProgress = Math.max(
                       0,
                       Math.min(
@@ -252,7 +248,7 @@ export function TechnologySection() {
             </div>
 
             {/* Right Column */}
-            <div
+            {/* <div
               className="flex flex-col will-change-transform"
               style={{
                 width: `${sideWidth}%`,
@@ -260,8 +256,8 @@ export function TechnologySection() {
                 transform: `translateX(${sideTranslateRight}%)`,
                 opacity: sideOpacity,
               }}
-            >
-              {/* {sideImages
+            > */}
+            {/* {sideImages
                 .filter((img) => img.position === "right")
                 .map((img, idx) => (
                   <div
@@ -280,7 +276,7 @@ export function TechnologySection() {
                     />
                   </div>
                 ))} */}
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </div>
@@ -293,11 +289,72 @@ export function TechnologySection() {
         ref={textSectionRef}
         className="relative overflow-hidden bg-background px-6 py-24 md:px-12 md:py-32 lg:px-20 lg:py-40"
       >
-        {/* Background Image with Grayscale Filter */}
+        <div className="relative z-10 mx-auto max-w-6xl" id="compare">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl font-medium tracking-tight text-primary md:text-4xl lg:text-5xl mb-6">
+              Which Kama EV Pickup Fits Your Business?
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+              {businessCases.map((item, index) => (
+                <div
+                  key={index}
+                  className="p-8 rounded-2xl border border-border bg-secondary/30 text-left"
+                >
+                  <h3 className="text-xl font-semibold text-primary mb-4">
+                    {item.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
 
-        {/* Text Content */}
-        <div className="relative z-10 mx-auto max-w-4xl">
-          <ScrollRevealText text={descriptionText} />
+          <div className="mt-32 ">
+            <h3 className="text-2xl font-medium text-center mb-12">
+              Kama EV EW1 vs EW2 – Full Technical Comparison
+            </h3>
+            <div className="overflow-x-auto rounded-3xl border border-border">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="bg-secondary/50">
+                    <th className="p-6 font-medium text-muted-foreground border-b border-border">
+                      Feature
+                    </th>
+                    <th className="p-6 font-semibold text-primary border-b border-border text-center">
+                      Kama EV EW1
+                    </th>
+                    <th className="p-6 font-semibold text-primary border-b border-border text-center">
+                      Kama EV EW2
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border">
+                  {technicalComparison.map((row, index) => (
+                    <tr
+                      key={index}
+                      className="hover:bg-secondary/20 transition-colors"
+                    >
+                      <td className="p-6 text-muted-foreground font-medium">
+                        {row.label}
+                      </td>
+                      <td className="p-6 text-primary text-center font-medium">
+                        {row.ew1}
+                      </td>
+                      <td className="p-6 text-primary text-center font-medium">
+                        {row.ew2}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-8 text-sm text-center text-muted-foreground lowercase tracking-widest uppercase">
+              * prices and specifications subject to change based on local
+              conditions
+            </p>
+          </div>
         </div>
       </div>
     </section>

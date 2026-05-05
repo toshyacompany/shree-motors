@@ -42,7 +42,7 @@ const clashDisplay = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "VILDMARK | Go Further",
+  title: "Shree Motors Pvt. Ltd.",
   description:
     "High-performance outdoor gear engineered for the modern explorer. Lightweight, durable, adventure-ready.",
   generator: "v0.app",

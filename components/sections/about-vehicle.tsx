@@ -13,11 +13,15 @@ const specs = [
 
 export function AboutVehicle() {
   return (
-    <section className="bg-background">
+    <section className="bg-background" id="about">
       {/* Newsletter Banner */}
 
       {/* Decorative Icons */}
-      <div className="flex items-center justify-center gap-6 pb-20"></div>
+      <div className="px-6 py-12 text-center md:px-12 lg:px-20 shrink-0 z-10">
+        <h2 className="text-4xl font-medium tracking-tight text-primary md:text-5xl lg:text-7xl">
+          About Kama EV.
+        </h2>
+      </div>
 
       {/* Specs Grid */}
       <div className="grid grid-cols-2 border-t border-border md:grid-cols-3 lg:grid-cols-6">

@@ -23,30 +23,30 @@ const buildSpecs = [
 const accessories = [
   {
     id: 1,
-    name: "Luxury Sedan",
+    name: "Kama EV EW1",
     description: "Premium comfort for your daily commute",
-    price: "$45,000",
+    price: "	NPR 25.90 Lakhs",
     image: "images/meet-kama.jpeg",
   },
   {
     id: 2,
-    name: "Trekking Van",
+    name: "	Kama EV EW2",
     description: "Spacious and reliable for long journeys",
-    price: "$35,000",
+    price: "	NPR 25.70 Lakhs",
     image: "images/meet-kama.jpeg",
   },
   {
     id: 3,
-    name: "Commercial Truck",
+    name: "EV Van",
     description: "Powerful performance for heavy-duty tasks",
-    price: "$65,000",
+    price: "	NPR 35.00 Lakhs",
     image: "images/meet-kama.jpeg",
   },
 ];
 
 export function SpecsAndCollection() {
   return (
-    <section id="specification" className="bg-background">
+    <section id="specifications" className="bg-background">
       {/* Section Title */}
       <div className="px-6 py-12 text-center md:px-12 lg:px-20 shrink-0 z-10">
         <h2 className="text-4xl font-medium tracking-tight text-primary md:text-5xl lg:text-7xl">

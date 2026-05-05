@@ -1,5 +1,6 @@
 import { Header } from "@/components/header";
 import { AboutVehicle } from "@/components/sections/about-vehicle";
+import { ContactSection } from "@/components/sections/contact-section";
 import { FooterSection } from "@/components/sections/footer-section";
 import { HeroSection } from "@/components/sections/hero-section";
 import { SpecsAndCollection } from "@/components/sections/specs-and-collection";
@@ -20,6 +21,7 @@ export default function Home() {
       {/* <FeaturedProductsSection /> */}
       {/* <GallerySection /> */}
       <TestimonialsSection />
+      <ContactSection />
       <FooterSection />
     </main>
   );

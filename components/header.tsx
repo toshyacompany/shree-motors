@@ -57,28 +57,28 @@ export function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-10 md:flex text-lg">
           <Link
-            href="#products"
+            href="#about"
             className={` transition-colors ${isScrolled ? "text-primary hover:text-white" : "text-background hover:text-primary"}`}
           >
-            Products
+            About
           </Link>
           <Link
-            href="#technology"
+            href="#highlights"
             className={` transition-colors ${isScrolled ? "text-primary hover:text-white" : "text-background hover:text-primary"}`}
           >
-            Technology
+            Highlights
           </Link>
           <Link
-            href="#gallery"
+            href="#specifications"
             className={` transition-colors ${isScrolled ? "text-primary hover:text-white" : "text-background hover:text-primary"}`}
           >
-            Gallery
+            Specifications
           </Link>
           <Link
-            href="#specification"
+            href="#compare"
             className={` transition-colors ${isScrolled ? "text-primary hover:text-white" : "text-background hover:text-primary"}`}
           >
-            Accessories
+            Compare
           </Link>
         </nav>
 
