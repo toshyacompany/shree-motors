@@ -21,7 +21,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-4 md:top-12 left-1/2 -translate-x-1/2 z-50 w-[95%] md:w-[70%] transition-all duration-300 ${isScrolled || isMenuOpen ? "bg-background/95 backdrop-blur-lg rounded-xl" : "bg-transparent rounded-xl"}`}
+      className={`fixed top-4 md:top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] md:w-[70%] transition-all duration-300 ${isScrolled || isMenuOpen ? "bg-white/10 backdrop-blur-md border border-white/20 shadow-lg rounded-xl" : "bg-white/10 backdrop-blur-md border border-white/20 shadow-lg rounded-xl"}`}
       style={{
         boxShadow:
           isScrolled || isMenuOpen
@@ -29,7 +29,7 @@ export function Header() {
             : "none",
       }}
     >
-      <div className="flex items-center justify-between transition-all duration-300 px-6 md:px-8 py-3 md:py-4">
+      <div className="flex items-center justify-between transition-all duration-300 px-6 md:px-8 py-3">
         {/* Logo */}
 
         <Link href="/" className="flex items-center gap-2 relative z-50">

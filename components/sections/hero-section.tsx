@@ -77,7 +77,7 @@ export function HeroSection() {
   return (
     <section ref={sectionRef} className="relative bg-background">
       {/* Sticky container for scroll animation */}
-      <div className="sticky top-0 h-screen overflow-hidden p-4 md:p-10">
+      <div className="sticky top-0 h-screen overflow-hidden">
         <div className="flex h-full w-full items-center justify-center">
           {/* Bento Grid Container */}
           <div
@@ -135,7 +135,7 @@ export function HeroSection() {
                 muted
                 loop
                 playsInline
-                className="absolute inset-0 h-full w-full object-cover rounded-3xl"
+                className="absolute inset-0 h-full w-full object-cover"
               />
               {/* <Image
                 src="/images/meet-kama.jpeg"
