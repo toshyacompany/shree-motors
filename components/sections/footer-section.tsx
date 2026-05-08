@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 const footerLinks = {
@@ -26,8 +27,14 @@ export function FooterSection() {
         <div className="grid grid-cols-2 gap-12 md:grid-cols-4 lg:grid-cols-5">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1 lg:col-span-2">
-            <Link href="/" className="text-lg font-medium text-foreground">
-              Shree Motors Pvt. Ltd.
+            <Link href="/" className="inline-block">
+              <Image
+                src="/logo.png"
+                alt="Shree Motors Logo"
+                width={80}
+                height={80}
+                className="object-contain"
+              />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
               Call Shree Motors Directly – Urgent EV Inquiries & Immediate
@@ -78,7 +85,7 @@ export function FooterSection() {
       {/* Bottom Bar */}
       <div className="border-t border-border px-6 py-6 md:px-12 lg:px-20">
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-muted-foreground uppercase tracking-[0.2em]">
             &copy; {new Date().getFullYear()} Shree Motors Pvt. Ltd. All rights
             reserved.
           </p>
@@ -89,7 +96,7 @@ export function FooterSection() {
               href="https://www.toshya.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-muted-foreground transition-colors hover:text-orange-500"
+              className="text-sm text-muted-foreground transition-colors tracking-[0.2em] uppercase hover:text-orange-500"
             >
               Designed & Developed by Toshya Digital Pvt. Ltd.
             </Link>

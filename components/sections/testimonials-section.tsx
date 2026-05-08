@@ -11,8 +11,8 @@ export function TestimonialsSection() {
           About Shree Motors.
         </h2>
       </div>
-      <div className="px-6 py-16 md:px-12 md:py-20">
-        <p className="mx-auto max-w-6xl text-2xl font-semibold leading-relaxed text-muted-foreground md:text-3xl  lg:leading-snug text-justify">
+      <div className="px-6 py-6 md:px-12 md:py-20">
+        <p className="mx-auto max-w-6xl text-2xl leading-relaxed text-muted-foreground md:text-3xl  lg:leading-snug text-justify italic">
           श्री मोटर्स प्रा.लि. तपाईंको व्यापार र आवश्यकताहरूलाई ध्यानमा राखेर
           तयार पारिएको इलेक्ट्रिक लाइट कमर्सियल भेइकल (LCV) को विश्वसनीय वितरक
           हो। हामी Kama EV लाई नेपालका विभिन्न क्षेत्रहरू—जस्तै लजिस्टिक्स,

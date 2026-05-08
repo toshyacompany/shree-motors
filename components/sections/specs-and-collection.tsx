@@ -67,7 +67,9 @@ export function SpecsAndCollection() {
               <p className="mb-2 text-xs uppercase tracking-[0.2em] text-foreground">
                 {spec.label}
               </p>
-              <p className="font-medium text-primary text-3xl">{spec.value}</p>
+              <p className="font-medium text-primary text-2xl md:text-4xl">
+                {spec.value}
+              </p>
             </div>
           ))}
         </div>
@@ -99,11 +101,11 @@ export function SpecsAndCollection() {
                     <h3 className="text-lg font-medium leading-snug text-foreground">
                       {accessory.name}
                     </h3>
-                    <p className="mt-2 text-sm text-muted-foreground">
+                    <p className="mt-2 text-xs text-muted-foreground">
                       {accessory.description}
                     </p>
                   </div>
-                  <span className="text-lg font-medium text-primary">
+                  <span className="text-base font-medium text-primary">
                     {accessory.price}
                   </span>
                 </div>
