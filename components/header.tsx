@@ -21,7 +21,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-4 md:top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] md:w-[70%] transition-all duration-300 ${isScrolled || isMenuOpen ? "bg-white/10 backdrop-blur-md border border-white/20 shadow-lg rounded-xl" : "bg-white/10 backdrop-blur-md border border-white/20 shadow-lg rounded-xl"}`}
+      className={`fixed top-4 md:top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] md:w-[70%] transition-all duration-300 bg-white/10 backdrop-blur-md shadow-lg rounded-xl`}
       style={{
         boxShadow:
           isScrolled || isMenuOpen
@@ -106,42 +106,42 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="border-t border-border bg-background px-6 py-8 md:hidden rounded-b-2xl">
-          <nav className="flex flex-col gap-6">
+        <div className="bg-white/10 backdrop-blur-md shadow-lg md:hidden p-8 rounded-b-xl">
+          <nav className="flex flex-col gap-6 text-center">
             <Link
-              href="#products"
-              className="text-lg text-foreground"
+              href="#about"
+              className="text-lg text-foreground  transition-colors hover:text-primary"
               onClick={() => setIsMenuOpen(false)}
             >
-              Products
+              About
             </Link>
             <Link
-              href="#technology"
-              className="text-lg text-foreground"
+              href="#highlights"
+              className="text-lg text-foreground transition-colors hover:text-primary"
               onClick={() => setIsMenuOpen(false)}
             >
-              Technology
+              Highlights
             </Link>
             <Link
-              href="#gallery"
-              className="text-lg text-foreground"
+              href="#specifications"
+              className="text-lg text-foreground  transition-colors hover:text-primary"
               onClick={() => setIsMenuOpen(false)}
             >
-              Gallery
+              Specifications
             </Link>
             <Link
-              href="#accessories"
-              className="text-lg text-foreground"
+              href="#compare"
+              className="text-lg text-foreground transition-colors hover:text-primary"
               onClick={() => setIsMenuOpen(false)}
             >
-              Accessories
+              Compare
             </Link>
             <Link
               href="#reserve"
               className="mt-4 bg-foreground px-5 py-3 text-center text-sm font-medium text-background rounded-full"
               onClick={() => setIsMenuOpen(false)}
             >
-              Reserve
+              Book Now
             </Link>
           </nav>
         </div>

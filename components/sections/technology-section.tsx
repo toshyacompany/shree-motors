@@ -193,7 +193,7 @@ export function TechnologySection() {
           >
             {/* Main Center Image */}
             <div
-              className="relative bg-primary rounded-3xl overflow-hidden will-change-transform"
+              className="relative bg-background rounded-3xl overflow-hidden will-change-transform"
               style={{
                 width: `${centerWidth}%`,
                 height: "100%",
@@ -204,8 +204,8 @@ export function TechnologySection() {
               <div className="absolute" />
 
               {/* Title Text - Fades out word by word with blur */}
-              <div className="absolute inset-0 flex flex-col items-center bg-primary rounded-3xl justify-center px-6 text-center">
-                <h2 className="max-w-4xl font-medium leading-tight tracking-tight text-background md:text-5xl lg:text-8xl text-5xl">
+              <div className="absolute inset-0 flex flex-col items-center bg-foreground/10 justify-center px-6 text-center">
+                <h2 className="max-w-4xl font-medium leading-tight tracking-tight text-primary md:text-5xl lg:text-8xl text-5xl">
                   {[
                     "Precision",
                     "Engineering",

@@ -16,7 +16,7 @@ export function ContactSection() {
             <div className="flex flex-col md:flex-row gap-8 items-start">
               <div className="relative w-full md:w-64 aspect-[4/5] rounded-2xl overflow-hidden bg-secondary">
                 <FadeImage
-                  src="/images/md-profile.jpg" // Note: User needs to add this image
+                  src="/shree-manager.jpg" // Note: User needs to add this image
                   alt="Sushant Chand"
                   fill
                   className="object-cover"
