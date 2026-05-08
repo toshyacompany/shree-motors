@@ -69,7 +69,7 @@ export function HeroSection() {
   const sideTranslateLeft = -100 + imageProgress * 100; // -100% to 0%
   const sideTranslateRight = 100 - imageProgress * 100; // 100% to 0%
   const borderRadius = imageProgress * 24; // 0px to 24px
-  const gap = imageProgress * 16; // 0px to 16px
+  const gap = imageProgress * 0; // 0px to 16px
 
   // Vertical offset for side columns to move them up on mobile
   const sideTranslateY = -(imageProgress * 15); // Move up by 15% when fully expanded
